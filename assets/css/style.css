@@ -1,0 +1,268 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+  -------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+   blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+   ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+   dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+   tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+   figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+   }
+
+   /* HTML5 display-role reset for older browsers */
+   article, aside, details, figcaption, figure,
+   footer, header, hgroup, menu, nav, section {
+    display: block;
+   }
+
+   /* Force scrollbar */
+   html { overflow-y: scroll; }
+
+   /* Align radios and text inputs with their label */
+
+   input[type='radio'] { vertical-align: text-bottom; }
+
+   /* Hand cursor on clickable input elements */
+   label,
+   input[type='button'],
+   input[type='submit'],
+   button {
+    cursor: pointer;
+   }
+
+   strong {
+    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+   }
+
+   em { font-style: italic; }
+
+   img {
+    border: 0;
+    vertical-align: middle;
+   }
+
+   sub,
+   sup {
+    vertical-align: baseline;
+    position: relative;
+    font-size: 55%;
+    line-height: 0;
+   }
+
+   sup { top: -.7em; }
+
+   sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* 1.3. Font class declaration
+========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+ .futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+ }
+
+ /* ======= Your Styling Goes Below ======= */
+
+.container{
+  max-width: 1286px;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.wrapper {height: 100%;}
+.main{
+  background: url("http://media.pixcove.com/C/1/6/Wooden-Timber-Textures-Backgrounds-Dock-Background-1427.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 670px;
+
+}
+
+.road{
+  position: relative;
+  overflow: hidden;
+  height: -webkit-fill-available;
+}
+
+.batmobile{
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  animation: car 3s;
+
+}
+
+@keyframes car{
+  from{ left: -500px; }
+  to{ left:100px; }
+}
+
+.batman{
+  width: 20%;
+  position: absolute;
+  bottom: 0;
+  right: -245px;
+  animation: batman 4s 3s, jump 0.3s 6.2s ;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes batman{
+  from{ bottom: 0px; }
+  to{ right: 800px; }
+}
+
+@keyframes jump{
+  0%{bottom: 0; }
+
+  90%{ bottom: 200px; transform: rotateX(360deg);}
+
+  100%{ bottom: 97px;}
+}
+
+.superman{
+  width: 20%;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  animation: superman 10s infinite;
+}
+
+@keyframes superman{
+  from{left: -200px;}
+  to{ left: 1300px; }
+}
+
+.wonder{
+  width: 15%;
+  position: absolute;
+  top: -271px;
+  right: 530px;
+  animation: wonder 3s 9s, rotate 3s 9s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes wonder {
+  from{ top: -271px; }
+  to{ top: 400px; }
+}
+
+@keyframes rotate{
+  0%{ transform: rotate3d(0, 1, 0, 180deg); }
+  60%{ transform: rotate3d(0, 1, 0, 360deg); }
+  100%{ transform: rotateX(0deg); }
+}
+
+.aquaman{
+  width: 15%;
+  position: absolute;
+  bottom: -350px;
+  right: 20%;
+  animation: aquaman 1s 13s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes aquaman{
+  0%{ bottom: -200px; }
+  50%{ bottom: -100px; transform: rotateX(360deg);}
+  100%{ bottom: 0; }
+}
